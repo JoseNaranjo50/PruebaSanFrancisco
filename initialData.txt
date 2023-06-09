@@ -1,0 +1,17 @@
+INSERT INTO Curso  (Nombre,HoraInicio ,HoraFin ,NumeroCreditos)  VALUES ('Analitica','07:00','09:00',30)
+INSERT INTO Curso  (Nombre,HoraInicio ,HoraFin ,NumeroCreditos)  VALUES ('Fisica','09:00','11:00',40)
+INSERT INTO Curso  (Nombre,HoraInicio ,HoraFin ,NumeroCreditos)  VALUES ('Literatura','11:00','13:00',20)
+INSERT INTO Curso  (Nombre,HoraInicio ,HoraFin ,NumeroCreditos)  VALUES ('Desarrollo Web','13:00','15:00',30)
+INSERT INTO Curso  (Nombre,HoraInicio ,HoraFin ,NumeroCreditos)  VALUES ('Laboratorio','15:00','17:00',10)
+
+
+INSERT INTO Estudiantes (Cedula,Nombre ,Apellido ,Edad)  VALUES ('1720663390','Jose','Naranjo',22)
+INSERT INTO Estudiantes (Cedula,Nombre ,Apellido ,Edad)  VALUES ('1720663391','Andres','Samaniego',21)
+INSERT INTO Estudiantes (Cedula,Nombre ,Apellido ,Edad)  VALUES ('1720663392','Joel','Vargas',20)
+
+
+INSERT INTO RegistroCurso (IdCurso ,IdEstudiantes ,FechaRegistro)  VALUES (1,1,'2023-06-07 00:00:00.001')
+INSERT INTO RegistroCurso (IdCurso ,IdEstudiantes ,FechaRegistro)  VALUES (2,1,'2023-06-07 00:00:00.001')
+INSERT INTO RegistroCurso (IdCurso ,IdEstudiantes ,FechaRegistro)  VALUES (3,1,'2023-06-07 00:00:00.001')
+INSERT INTO RegistroCurso (IdCurso ,IdEstudiantes ,FechaRegistro)  VALUES (1,2,'2023-06-07 00:00:00.001')
+INSERT INTO RegistroCurso (IdCurso ,IdEstudiantes ,FechaRegistro)  VALUES (2,2,'2023-06-07 00:00:00.001')

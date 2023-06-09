@@ -1,0 +1,72 @@
+
+Use master
+
+
+CREATE DATABASE SanFrancisco
+go
+USE SanFrancisco
+
+
+/*==============================================================*/
+/* Table: Curso                                                 */
+/*==============================================================*/
+create table Curso (
+   IdCurso              int                  identity(1, 1),
+   Nombre               varchar(32)          null,
+   HoraInicio           varchar(10)          null,
+   HoraFin              varchar(10)          null,
+   NumeroCreditos       int                  null
+)
+on "PRIMARY"
+go
+
+alter table Curso
+   add constraint PK_CURSO primary key (IdCurso)
+      on "PRIMARY"
+go
+
+/*==============================================================*/
+/* Table: Estudiantes                                           */
+/*==============================================================*/
+create table Estudiantes (
+   IdEstudiantes        int                  identity(1, 1),
+   Cedula               varchar(32)          null,
+   Nombre               varchar(32)          null,
+   Apellido             varchar(32)          null,
+   Edad                 int                  null
+)
+on "PRIMARY"
+go
+
+alter table Estudiantes
+   add constraint PK_ESTUDIANTES primary key (IdEstudiantes)
+      on "PRIMARY"
+go
+
+/*==============================================================*/
+/* Table: RegistroCurso                                         */
+/*==============================================================*/
+create table RegistroCurso (
+   IdRegistro           int                  identity(1, 1),
+   IdCurso              int                  not null,
+   FechaRegistro        datetime             not null,
+   IdEstudiantes        int                  not null
+)
+on "PRIMARY"
+go
+
+
+alter table RegistroCurso
+   add constraint PK_REGISTRO_CURSO primary key (IdRegistro)
+      on "PRIMARY"
+go
+
+alter table RegistroCurso
+   add constraint FK_REGISTRO_CURSO_REFERENCE_ESTUDIANTES foreign key (IdEstudiantes)
+      references Estudiantes (IdEstudiantes)
+go
+
+alter table RegistroCurso
+   add constraint FK_RESGISTRO_CURSO_REFERENCE_CURSO foreign key (IdCurso)
+      references Curso (IdCurso)
+go
