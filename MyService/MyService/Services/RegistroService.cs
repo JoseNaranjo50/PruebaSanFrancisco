@@ -30,5 +30,9 @@ namespace MyService.Services
       return await _registroRepository.RegistrarEstudiantesCurso(_mapper.Map<RegistroCurso>(registro));
     }
 
-  }
+        public async Task<List<EstudiantesDto>> GetAll()
+        {
+            return _mapper.Map<List<EstudiantesDto>>(await _registroRepository.GetAll());
+        }
+    }
 }
