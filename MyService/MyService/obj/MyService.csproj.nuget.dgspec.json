@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "J:\\PruebaSanFrancisco\\MyService\\MyService\\MyService.csproj": {}
+    "J:\\PruebaSanFrancisco\\PruebaSanFrancisco\\MyService\\MyService\\MyService.csproj": {}
   },
   "projects": {
-    "J:\\PruebaSanFrancisco\\MyService\\MyService\\MyService.csproj": {
+    "J:\\PruebaSanFrancisco\\PruebaSanFrancisco\\MyService\\MyService\\MyService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "J:\\PruebaSanFrancisco\\MyService\\MyService\\MyService.csproj",
+        "projectUniqueName": "J:\\PruebaSanFrancisco\\PruebaSanFrancisco\\MyService\\MyService\\MyService.csproj",
         "projectName": "MyService",
-        "projectPath": "J:\\PruebaSanFrancisco\\MyService\\MyService\\MyService.csproj",
+        "projectPath": "J:\\PruebaSanFrancisco\\PruebaSanFrancisco\\MyService\\MyService\\MyService.csproj",
         "packagesPath": "C:\\Users\\JoseN\\.nuget\\packages\\",
-        "outputPath": "J:\\PruebaSanFrancisco\\MyService\\MyService\\obj\\",
+        "outputPath": "J:\\PruebaSanFrancisco\\PruebaSanFrancisco\\MyService\\MyService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\JoseN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22,10 +22,12 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net60": {
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -36,7 +38,8 @@
         }
       },
       "frameworks": {
-        "net60": {
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
@@ -59,12 +62,26 @@
               "version": "[6.2.3, )"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "win7-x86": {
-          "#import": []
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
